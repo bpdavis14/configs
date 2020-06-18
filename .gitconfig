@@ -3,3 +3,5 @@
 	name = Brian Davis
 [alias]
 	graph = log --all --graph --oneline
+[core]
+	excludesfile = /home/brian/.gitignore_global
