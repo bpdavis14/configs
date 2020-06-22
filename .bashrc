@@ -124,3 +124,6 @@ bind '"df":"\e"'
 
 # Resolve dc to cd
 alias dc=cd
+
+# Stop typing that pesky 3 on "python3"
+alias python=python3
