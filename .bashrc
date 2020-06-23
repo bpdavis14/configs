@@ -128,3 +128,4 @@ alias dc=cd
 # Stop typing that pesky 3 on "python3" and "pip3"
 alias python=python3
 alias pip=pip3
+alias cython=cython3
