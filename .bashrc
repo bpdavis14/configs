@@ -129,3 +129,6 @@ alias dc=cd
 alias python=python3
 alias pip=pip3
 alias cython=cython3
+
+# Add '~/.local/bin' to path
+export PATH="$HOME/.local/bin/:$PATH"
