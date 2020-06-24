@@ -90,9 +90,8 @@ set smarttab " A <tab> at beginning line inserts spaces set in shiftwidth
 let g:ctrlp_map='<c-p>'
 let g:crtlp_cmd='CrtlP'
 
-" Remap the <esc> character
-inoremap df <ESC> 
-
 " Set custom color scheme
 colorscheme pablo
 
+" Disable highlighting in ALE
+let g:ale_set_highlights = 0

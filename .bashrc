@@ -120,7 +120,6 @@ fi
 # Also avoid using the actual <esc> key
 export EDITOR=vim
 set -o vi
-bind '"df":"\e"'
 
 # Resolve dc to cd
 alias dc=cd
@@ -132,3 +131,6 @@ alias cython=cython3
 
 # Add '~/.local/bin' to path
 export PATH="$HOME/.local/bin/:$PATH"
+
+# Source function for reseting your WiFi
+source ~/bin/rw.sh
