@@ -57,7 +57,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[0;36m\]\h\[\033[90m\]:\[\033[1;33m\]\W \[\033[0;37m\]\$ \[\033[1;37m\]'
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -132,5 +132,9 @@ alias cython=cython3
 # Add '~/.local/bin' to path
 export PATH="$HOME/.local/bin/:$PATH"
 
-# Source function for reseting your WiFi
-source ~/bin/rw.sh
+# Reset wifi when it's acting up
+rw() {
+    echo -n "Reseting WiFi... "
+    nmcli radio wifi off && sleep 3 && nmcli radio wifi on
+    echo "Done!"
+}
