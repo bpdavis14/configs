@@ -1,3 +1,4 @@
+# run action on git pushes to master branch
 on:
   push:
     branch:
@@ -6,6 +7,7 @@ on:
 name: 'Trigger: Push action'
 
 jobs:
+  # Run shellcheck on pushes
   shellcheck:
     name: Shellcheck
     runs-on: ubuntu-latest
@@ -13,7 +15,21 @@ jobs:
     - uses: actions/checkout@master
     - name: Run ShellCheck
       uses: ludeeus/action-shellcheck@master
+      # Only fail actions when there are errors
       with:
-          severity: error
+        severity: error
+      # Ignore shebangs at the top of files. A number of the dot files
+      # in this repo are not executable; thus this error isn't really useful.
       env:
-          SHELLCHECK_OPTS: -e SC2148
+        SHELLCHECK_OPTS: -e SC2148
+  
+  # run a check on words because words is hard
+  proselint:
+    name: Proselint
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Run Proselint
+      uses: amperser/proselint@master
+      run: proselint **/*.md
+
