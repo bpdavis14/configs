@@ -31,8 +31,8 @@ jobs:
     - uses: actions/checkout@master
     - name: Setup Proselint Dependencies
       run: |
-        add-apt-repository universe
-        apt install python3-proselint
+        sudo add-apt-repository universe
+        sudo apt install python3-proselint
     - name: Run Proselint
       run: proselint **/*.md
 
