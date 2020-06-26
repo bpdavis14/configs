@@ -29,7 +29,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: Run Proselint
+    - name: Get Proselint
       uses: amperser/proselint@master
+    - name: Run Proseling
       run: proselint **/*.md
 
