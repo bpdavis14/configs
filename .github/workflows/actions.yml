@@ -29,6 +29,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
+    - name: Setup Proselint Dependencies
+      run: pip install proselint
     - name: Run Proselint
       run: proselint **/*.md
 
