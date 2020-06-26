@@ -1,7 +1,7 @@
 # run action on git pushes to master branch
 on:
   push:
-    branch:
+    branches:
       - master
 
 name: 'Trigger: Push action'
@@ -29,8 +29,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: Get Proselint
-      uses: amperser/proselint@master
-    - name: Run Proseling
+    - name: Run Proselint
       run: proselint **/*.md
 
