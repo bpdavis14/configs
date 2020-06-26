@@ -24,14 +24,14 @@ jobs:
         SHELLCHECK_OPTS: -e SC2148
   
   # run a check on words because words is hard
-  proselint:
-    name: Proselint
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@master
-    - name: Setup Proselint Dependencies
-      run: |
-        sudo apt install python3-proselint
-    - name: Run Proselint
-      run: proselint *.md
+  # proselint:
+  #  name: Proselint
+  #  runs-on: ubuntu-latest
+  #  steps:
+  #  - uses: actions/checkout@master
+  #  - name: Setup Proselint Dependencies
+  #    run: |
+  #      sudo apt install python3-proselint
+  #  - name: Run Proselint
+  #    run: proselint *.md
 
