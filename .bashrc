@@ -138,3 +138,9 @@ rw() {
     nmcli radio wifi off && sleep 3 && nmcli radio wifi on
     echo "Done!"
 }
+
+# Shortcut for clear
+c() {
+    clear
+}
+

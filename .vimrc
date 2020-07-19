@@ -82,9 +82,9 @@ inoremap <Down>  <ESC>:echoe "Use j"<CR>
 " Python editing configuration
 set smartindent " Do smart autoindenting when starting a new line
 set shiftwidth=4 " Set number of spaces per auto indentation
-" set expandtab " When using <tab> put spaces instead of a <tab> character
-" set tabstop=4 "Number of spaces a <tab> adds
-" set smarttab " A <tab> at beginning line inserts spaces set in shiftwidth
+set expandtab " When using <tab> put spaces instead of a <tab> character
+set tabstop=4 "Number of spaces a <tab> adds
+set smarttab " A <tab> at beginning line inserts spaces set in shiftwidth
 
 " CtrlP Options
 let g:ctrlp_map='<c-p>'
